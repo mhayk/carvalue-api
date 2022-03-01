@@ -11,3 +11,9 @@ $ nest g controller reports
 $ nest g service users
 $ nest g service reports
 ```
+
+## TypeORM
+
+```
+$ npm i @nestjs/typeorm typeorm sqlite3
+```
