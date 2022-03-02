@@ -12,6 +12,11 @@ $ nest g service users
 $ nest g service reports
 ```
 
+### ValidationPipe
+```
+$ npm i class-validator class-transformer
+```
+
 ## TypeORM
 
 ```
