@@ -24,3 +24,8 @@ $ npm i class-validator class-transformer
 ```
 $ npm i @nestjs/typeorm typeorm sqlite3
 ```
+
+## Cookie-Session
+```
+$ npm i cookie-session @types/cookie-session
+```
