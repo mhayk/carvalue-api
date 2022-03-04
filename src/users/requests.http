@@ -38,3 +38,6 @@ GET http://localhost:3001/auth/colors/red
 
 ### Get the color
 GET http://localhost:3001/auth/colors
+
+### Get the currently signed in user
+GET http://localhost:3001/auth/whoami
