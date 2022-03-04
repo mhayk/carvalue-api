@@ -7,8 +7,7 @@ Content-Type: application/json
   "password": "123456"
 }
 
-### Login
-### Create a new user
+### Sign in as an existing user
 POST http://localhost:3001/auth/signin
 Content-Type: application/json
 
