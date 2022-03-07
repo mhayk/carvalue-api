@@ -60,4 +60,32 @@ describe('AuthService', () => {
       expect(err.message).toEqual('User not found');
     }
   });
+
+  it('throw if an invalid password is provided', async () => {
+    fakeUsersService.find = () =>
+      Promise.resolve([
+        { id: 1, email: 'test@test.com', password: 'test' },
+      ] as User[]);
+
+    try {
+      await service.signin('test@test.com', 'password');
+    } catch (err) {
+      expect(err.message).toEqual('Invalid password');
+    }
+  });
+
+  it('returns a user if signin is successful', async () => {
+    fakeUsersService.find = () =>
+      Promise.resolve([
+        {
+          id: 1,
+          email: 'test@test.com',
+          password:
+            'bb308779be0604e3.8df99cf071a2cd0131a3f9d7977b4676fda481711eea2ed1ca93a4a830351990',
+        },
+      ] as User[]);
+
+    const user = await service.signin('test@test.com', 'test');
+    expect(user).toBeDefined();
+  });
 });
