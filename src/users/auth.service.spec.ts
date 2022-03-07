@@ -52,4 +52,12 @@ describe('AuthService', () => {
       expect(err.message).toEqual('Email in use');
     }
   });
+
+  it('throws if signin is called with an unused email', async () => {
+    try {
+      await service.signin('test@test.com', 'test');
+    } catch (err) {
+      expect(err.message).toEqual('User not found');
+    }
+  });
 });
